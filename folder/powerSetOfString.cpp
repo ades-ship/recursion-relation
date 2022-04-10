@@ -3,14 +3,14 @@
 #include<iterator>
 #include<bits/stdc++.h>
 using namespace std;
-void subset(vector<int> input , vector<int> output, int index)
+void subset(vector<char> input , vector<char> output, int index)
 {    
        
      if(index>=input.size())
-     {   cout<<" ";
+     {
          for(auto i: output)
          {
-             cout<<i<<" ";
+             cout<<" "<<i;
          }
           cout<<endl;
          return ;
@@ -25,15 +25,16 @@ void subset(vector<int> input , vector<int> output, int index)
 }
 int main()
 {
-     int n,value;
+     char value;
+     int n;
      cin>>n;
-    vector<int> vrr(n),output;
+    vector<char> vrr(n),output;
     for(int i=0 ; i<n ; i++)
     {
         cin>>value;
         vrr.push_back(value);
     }
-    cout<<"power set of a set is :"<<endl;
+    cout<<"power set of a set is :";
     subset(vrr,output,0);
     return 0;
 }
