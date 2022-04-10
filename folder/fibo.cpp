@@ -17,7 +17,7 @@ int main()
     cin>>n;
 	r = fibonacci(n);
     
-	cout << " fibonacci is " << r;
+	cout << " fibonacci serie sum is " << r;
 
 	return 0;
 }
