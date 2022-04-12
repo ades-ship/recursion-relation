@@ -7,7 +7,7 @@ void subset(vector<char> input , vector<char> output, int index)
 {    
        
      if(index>=input.size())
-     {
+     {  
          for(auto i: output)
          {
              cout<<" "<<i;
@@ -34,7 +34,7 @@ int main()
         cin>>value;
         vrr.push_back(value);
     }
-    cout<<"power set of a set is :";
+    cout<<"power set of a set is :"<<endl;
     subset(vrr,output,0);
     return 0;
 }
