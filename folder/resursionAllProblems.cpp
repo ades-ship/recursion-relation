@@ -73,6 +73,7 @@ int main(){
 }
 */
 
+/*
 #include<bits/stdc++.h>
 using namespace std;
 int exponential(int x,int n)
@@ -87,5 +88,28 @@ int main()
      int x,n;
      cin>>x>>n;
        cout<<exponential(x,n);
+    return 0;
+}
+*/
+
+#include<iostream>
+using namespace std;
+int calcpower(int x, int n)
+{  
+     if(n==0 && x==0)  return -1;
+    if(n==0)  return 1;
+    if(x==0)  return x;
+    // if n is even
+    if(n%2==0) return calcpower( x, n/2) * calcpower( x, n/2);
+    // n is odd
+    else
+    return calcpower( x, n/2) *  calcpower( x, n/2) * x;
+
+}
+int main()
+{  
+    int x,n;
+    cin>>x>>n;
+     cout<<calcpower(x,n);
     return 0;
 }
